@@ -1,6 +1,6 @@
 import React, { memo, useMemo, Suspense } from 'react';
 import { ResponsiveContainer, ScatterChart, XAxis, YAxis, CartesianGrid, Tooltip, Scatter, Cell, PieChart, Pie } from 'recharts';
-import { Server, MapPin, AlertTriangle, Activity, Clock, Brain } from 'lucide-react';
+import { Server, MapPin, AlertTriangle, Activity, Clock, Brain, TrendingUp, Users } from 'lucide-react';
 import { MOCK_DATA } from '../mockData';
 import LoadingSpinner from '../LoadingSpinner';
 import SafeChart from '../SafeChart';
