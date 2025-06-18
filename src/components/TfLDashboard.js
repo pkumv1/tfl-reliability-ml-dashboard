@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useMemo, useCallback, memo, Suspense } from 'react';
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, ScatterChart, Scatter, AreaChart, Area, ComposedChart, ReferenceLine, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Treemap } from 'recharts';
-import { AlertTriangle, Activity, MapPin, TrendingUp, Clock, Zap, Thermometer, Download, Target, Layers, BarChart3, Brain, Shield, Radio, Wifi, Server, Globe, Network, Timer, RefreshCw, GitBranch, Share2, Calendar, Gauge, Cpu, Database, TrendingDown, Award, Crosshair, Bell, Users, Settings, AlertCircle, CheckCircle, XCircle, Wrench, Map, Battery, Signal, Monitor, Maximize2, Info, FileText, Lightbulb, Clipboard } from 'lucide-react';
+import React, { useState, useEffect, useCallback, Suspense } from 'react';
+import { AlertTriangle, BarChart3, Brain, Shield, Radio, Server, Globe, Network, Timer, TrendingUp, Download, MapPin, Activity, Target, Thermometer, Settings } from 'lucide-react';
 
-// Import the mock data
-import { MOCK_DATA } from './mockData';
+// Import the LoadingSpinner component
+import LoadingSpinner from './LoadingSpinner';
 
 // Import the tabs components
 import OverviewTab from './tabs/OverviewTab';
@@ -71,14 +70,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-// Loading Spinner
-const LoadingSpinner = memo(() => (
-  <div className="flex items-center justify-center h-64" role="status" aria-label="Loading">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-    <span className="sr-only">Loading...</span>
-  </div>
-));
 
 // Main Dashboard Component
 function TfLDashboard() {
