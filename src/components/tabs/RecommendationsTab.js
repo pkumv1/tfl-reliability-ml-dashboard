@@ -1,5 +1,5 @@
 import React, { memo, Suspense } from 'react';
-import { AlertTriangle, Shield, TrendingUp, Clipboard, Lightbulb, FileText } from 'lucide-react';
+import { AlertTriangle, Shield, TrendingUp, Info, Clipboard, Lightbulb, FileText } from 'lucide-react';
 import { MOCK_DATA } from '../mockData';
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -195,9 +195,6 @@ const RecommendationsTab = memo(() => {
     </Suspense>
   );
 });
-
-// Add missing import
-import { Info } from 'lucide-react';
 
 RecommendationsTab.displayName = 'RecommendationsTab';
 
