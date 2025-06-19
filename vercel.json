@@ -3,10 +3,11 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "devCommand": "npm start",
-  "installCommand": "npm install",
+  "installCommand": "npm install --legacy-peer-deps",
   "build": {
     "env": {
-      "CI": "false"
+      "CI": "false",
+      "SKIP_PREFLIGHT_CHECK": "true"
     }
   },
   "routes": [
@@ -14,5 +15,10 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "functions": {
+    "api/**.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
