@@ -1,15 +1,31 @@
+const path = require('path');
+
 module.exports = {
   webpack: {
     configure: (webpackConfig) => {
-      // Remove the ForkTsCheckerWebpackPlugin that's causing issues
+      // Remove all plugins that might use ajv
+      const pluginsToRemove = [
+        'ForkTsCheckerWebpackPlugin',
+        'ESLintWebpackPlugin',
+        'TypeScriptTypeChecker'
+      ];
+      
       webpackConfig.plugins = webpackConfig.plugins.filter(
-        (plugin) => plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin'
+        (plugin) => !pluginsToRemove.includes(plugin.constructor.name)
       );
       
-      // Disable ESLint plugin as well
-      webpackConfig.plugins = webpackConfig.plugins.filter(
-        (plugin) => plugin.constructor.name !== 'ESLintWebpackPlugin'
-      );
+      // Override module resolution to skip ajv-keywords issues
+      webpackConfig.resolve = {
+        ...webpackConfig.resolve,
+        alias: {
+          ...webpackConfig.resolve.alias,
+          'ajv-keywords': false,
+          'fork-ts-checker-webpack-plugin': false,
+        },
+      };
+      
+      // Disable source maps to speed up build
+      webpackConfig.devtool = false;
       
       return webpackConfig;
     },
@@ -23,5 +39,10 @@ module.exports = {
   },
   typescript: {
     enableTypeChecking: false,
+  },
+  style: {
+    postcss: {
+      mode: 'file',
+    },
   },
 };
