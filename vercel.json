@@ -7,8 +7,7 @@
   "build": {
     "env": {
       "CI": "false",
-      "SKIP_PREFLIGHT_CHECK": "true",
-      "NODE_OPTIONS": "--openssl-legacy-provider"
+      "SKIP_PREFLIGHT_CHECK": "true"
     }
   },
   "routes": [
