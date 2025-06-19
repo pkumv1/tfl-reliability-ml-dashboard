@@ -1,12 +1,10 @@
 {
-  "buildCommand": "npx --yes patch-package --patch-dir ./ && DISABLE_ESLINT_PLUGIN=true CI=false npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "installCommand": "npm install --legacy-peer-deps --omit=optional",
+  "installCommand": "npm install --legacy-peer-deps",
   "build": {
     "env": {
-      "NODE_VERSION": "16",
-      "DISABLE_ESLINT_PLUGIN": "true",
-      "CI": "false"
+      "NODE_VERSION": "16"
     }
   }
 }
