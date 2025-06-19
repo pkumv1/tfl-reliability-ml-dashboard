@@ -4,6 +4,10 @@
   "description": "TfL Advanced Reliability Analytics Dashboard",
   "private": true,
   "homepage": ".",
+  "engines": {
+    "node": ">=16.0.0 <20.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
