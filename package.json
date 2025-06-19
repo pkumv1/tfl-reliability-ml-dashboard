@@ -4,6 +4,10 @@
   "description": "TfL Advanced Reliability Analytics Dashboard",
   "private": true,
   "homepage": ".",
+  "engines": {
+    "node": "16.x",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -14,7 +18,8 @@
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prebuild": "npm install ajv@8.11.0 ajv-keywords@5.0.0 --save-dev --force"
   },
   "eslintConfig": {
     "extends": [
@@ -37,18 +42,20 @@
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.3.0",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24"
+    "postcss": "^8.4.24",
+    "ajv": "8.11.0",
+    "ajv-keywords": "5.0.0"
   },
   "overrides": {
-    "ajv": "^8.12.0",
-    "ajv-keywords": "^5.1.0",
+    "ajv": "8.11.0",
+    "ajv-keywords": "5.0.0",
     "fork-ts-checker-webpack-plugin": {
-      "ajv": "^8.12.0",
-      "ajv-keywords": "^5.1.0"
+      "ajv": "8.11.0",
+      "ajv-keywords": "5.0.0"
+    },
+    "schema-utils": {
+      "ajv": "8.11.0",
+      "ajv-keywords": "5.0.0"
     }
-  },
-  "resolutions": {
-    "ajv": "^8.12.0",
-    "ajv-keywords": "^5.1.0"
   }
 }
