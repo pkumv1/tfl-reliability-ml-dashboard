@@ -1,6 +1,6 @@
 {
   "framework": "create-react-app",
-  "buildCommand": "npm run build",
+  "buildCommand": "chmod +x build.sh && ./build.sh",
   "outputDirectory": "build",
   "devCommand": "npm start",
   "installCommand": "rm -f package-lock.json && npm install --legacy-peer-deps --force",
@@ -16,10 +16,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "functions": {
-    "api/*.js": {
-      "runtime": "nodejs16.x"
-    }
-  }
+  ]
 }
