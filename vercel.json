@@ -1,12 +1,10 @@
 {
-  "buildCommand": "node patch-ajv.js && CI=false npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "build",
   "installCommand": "npm install --legacy-peer-deps --force",
   "build": {
     "env": {
-      "CI": "false",
-      "SKIP_PREFLIGHT_CHECK": "true",
-      "DISABLE_ESLINT_PLUGIN": "true"
+      "NODE_VERSION": "18"
     }
   }
 }
