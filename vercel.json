@@ -4,6 +4,11 @@
   "outputDirectory": "build",
   "devCommand": "npm start",
   "installCommand": "npm install",
+  "build": {
+    "env": {
+      "CI": "false"
+    }
+  },
   "routes": [
     {
       "src": "/(.*)",
