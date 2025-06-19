@@ -3,11 +3,12 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "devCommand": "npm start",
-  "installCommand": "npm install --legacy-peer-deps",
+  "installCommand": "npm ci --legacy-peer-deps || npm install --legacy-peer-deps",
   "build": {
     "env": {
       "CI": "false",
-      "SKIP_PREFLIGHT_CHECK": "true"
+      "SKIP_PREFLIGHT_CHECK": "true",
+      "NODE_OPTIONS": "--openssl-legacy-provider"
     }
   },
   "routes": [
