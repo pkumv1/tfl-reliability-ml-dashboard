@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "devCommand": "npm start",
-  "installCommand": "npm ci --legacy-peer-deps || npm install --legacy-peer-deps",
+  "installCommand": "rm -f package-lock.json && npm install --legacy-peer-deps",
   "build": {
     "env": {
       "CI": "false",
