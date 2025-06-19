@@ -5,8 +5,8 @@
   "private": true,
   "homepage": ".",
   "engines": {
-    "node": "16.x",
-    "npm": ">=8.0.0"
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -18,8 +18,7 @@
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prebuild": "npm install ajv@8.11.0 ajv-keywords@5.0.0 --save-dev --force"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,20 +41,12 @@
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.3.0",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "ajv": "8.11.0",
-    "ajv-keywords": "5.0.0"
+    "postcss": "^8.4.24"
   },
   "overrides": {
-    "ajv": "8.11.0",
-    "ajv-keywords": "5.0.0",
-    "fork-ts-checker-webpack-plugin": {
+    "react-scripts": {
       "ajv": "8.11.0",
-      "ajv-keywords": "5.0.0"
-    },
-    "schema-utils": {
-      "ajv": "8.11.0",
-      "ajv-keywords": "5.0.0"
+      "ajv-keywords": "5.1.0"
     }
   }
 }
