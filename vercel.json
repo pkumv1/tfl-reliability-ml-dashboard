@@ -1,20 +1,5 @@
 {
-  "framework": "create-react-app",
-  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "devCommand": "npm start",
-  "installCommand": "rm -f package-lock.json && npm install --legacy-peer-deps --force",
-  "build": {
-    "env": {
-      "CI": "false",
-      "SKIP_PREFLIGHT_CHECK": "true",
-      "DISABLE_ESLINT_PLUGIN": "true"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ]
+  "installCommand": "npm install --legacy-peer-deps"
 }
